@@ -1,7 +1,6 @@
-import 'package:convert_cert/home/bloc/home_bloc.dart';
+import 'package:convert_cert/app_bloc_provider.dart';
 import 'package:convert_cert/home/widget/home.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,16 +21,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-class AppBlocProvider extends StatelessWidget {
-  final Widget child;
-
-  const AppBlocProvider({Key? key, required this.child}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) => BlocProvider(
-        create: (context) => HomeBloc(),
-        child: child,
-      );
 }
