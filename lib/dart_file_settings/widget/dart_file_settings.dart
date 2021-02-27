@@ -1,5 +1,6 @@
 import 'package:convert_cert/dart_file_settings/bloc/dart_file_bloc.dart';
 import 'package:convert_cert/dart_file_settings/model/dart_file_type.dart';
+import 'package:convert_cert/file_preview/widget/dart_file_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -10,6 +11,11 @@ class DartFileSettings extends StatelessWidget {
       children: [
         FileNameInput(),
         FileTypeCheckBox(),
+        Flexible(
+          child: SingleChildScrollView(
+            child: DartFilePreview(),
+          ),
+        ),
       ],
     );
   }
